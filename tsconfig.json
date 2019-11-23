@@ -4,7 +4,7 @@
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "target": "esnext",
-        "noImplicitAny": true,
+        "noImplicitAny": false, //Set to true if you want TS to allow you not to always declre type of value
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
