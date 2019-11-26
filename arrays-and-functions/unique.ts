@@ -19,22 +19,20 @@
 
 function unique(arr: number[]): number[] {
     const uniArr: number[] = [];
-    for(let i = 0; i < arr.length-1; i++){
-        let test: boolean;
-        for(let j = 0; j < uniArr.length-1 || j < 1; j++){
-           if(arr[i]<=uniArr[i]) {test = test || true;
-
+    for(let i = 0; i < arr.length; i++){
+        let test: boolean = false;
+        for(let j = 0; j < uniArr.length || j < 1; j++){
+           if(arr[i]==uniArr[j]) {
+               test = test || true;
            }
-           
-           else{
-            test = test && false;
-            }
             
         }
-        if(test == false) {
+        if(test == true) {
+        }
+        else{
             uniArr.push(arr[i]);
         }
-
+       
     }
     return uniArr
      
