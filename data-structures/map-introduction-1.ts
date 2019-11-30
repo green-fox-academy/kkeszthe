@@ -19,10 +19,9 @@ map[68] = "D";
 console.log(Object.keys(map).length);
 console.log(map[99]);
 delete map[97];
-if(map[100]=undefined){
+if(map[100]==undefined) {
     console.log("Key 100 does not have value yet");
-}
-else{
+} else {
     console.log("100: " + map[100]);
 }
 let key: string [] = (Object.keys(map));
