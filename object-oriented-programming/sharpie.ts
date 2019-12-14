@@ -12,10 +12,10 @@ class Sharpie{
     width: number;
     inkAmount: number;
 
-    constructor(color: string,width: number, inkAmount: number=100){
+    constructor(color: string,width: number){
         this.color = color;
         this.width = width;
-        this.inkAmount = inkAmount;
+        this.inkAmount = 100;
     }
 
     use(): number {
