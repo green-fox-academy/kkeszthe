@@ -10,9 +10,9 @@ class Animal {
     hunger: number;
     thirst: number;
 
-    constructor(hunger: number = 50, thirst: number = 50){
-        this.hunger = hunger;
-        this.thirst = thirst;
+    constructor(){
+        this.hunger = 50;
+        this.thirst = 50;
     }
     eat(): number{
        return this.hunger = this.hunger - 1;
