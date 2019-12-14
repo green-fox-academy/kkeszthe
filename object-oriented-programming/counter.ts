@@ -8,18 +8,20 @@ also we can reset() the value to the initial value */
 
 class Counter{
     integer: number;
-    change: number;
+   // change: number;
+    originalNumber: number;
 
     constructor(integer: number = 0){
         this.integer = integer;
-        this.change = 0
+        //this.change = 0
+        this.originalNumber = integer;
     }
     add(number: number = null): number{
         if(number === null){
-            this.change = this.change + 1;
+            //this.change = this.change + 1;
             return this.integer = this.integer+1;
         } else {
-            this.change = this.change + number;
+            //this.change = this.change + number;
             return this.integer = this.integer + number;
         }
     
@@ -27,10 +29,12 @@ class Counter{
     get(): string {
         return "'" + this.integer + "'";
     }
-    reset(): number{
+    /* reset(): number{
         return this.integer = this.integer-this.change;
+    }; */
+    reset(): number{
+        return this.integer = this.originalNumber;
     };
-    
 }
 
 let number = new Counter();
