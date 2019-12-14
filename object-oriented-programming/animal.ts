@@ -15,23 +15,22 @@ class Animal {
         this.thirst = 50;
     }
     eat(): number{
-       return this.hunger = this.hunger - 1;
+       return this.hunger--;
     }
     drink(): number{
-        return this.thirst = this.thirst - 1;
+        return this.thirst--;
      }
-     play(): number{
-        this.hunger = this.hunger + 1;
-        this.thirst = this.thirst + 1;
-         return 
+     play(): void {
+        this.hunger++;
+         this.thirst++;
      }
 }
 
 const unicorn = new Animal();
 console.log(unicorn);
-console.log(unicorn.eat());
+unicorn.eat();
 console.log(unicorn);
-console.log(unicorn.drink());
+unicorn.drink();
 console.log(unicorn);
 console.log(unicorn.play());
 console.log(unicorn);
