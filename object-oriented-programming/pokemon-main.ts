@@ -18,15 +18,13 @@ for(let i: number = 0; i < pokemonOfAsh.length; i++){
     };
 }
 
-pokemonOfAsh.forEach(function (value: Pokemon,i: number){
-    if(pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)){
-    choice = pokemonOfAsh[i].name;
+pokemonOfAsh.forEach(function (value: Pokemon,index: number, array: Pokemon[]){
+    if(pokemonOfAsh[index].isEffectiveAgainst(wildPokemon)){
+    choice = pokemonOfAsh[index].name;
 }
-});
+})
 
-console.log(pokemonOfAsh.findIndex(function (value: Pokemon,i: number){
-    pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)
-}))
+
     
 
 
