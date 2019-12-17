@@ -18,6 +18,18 @@ for(let i: number = 0; i < pokemonOfAsh.length; i++){
     };
 }
 
+pokemonOfAsh.forEach(function (value: Pokemon,i: number){
+    if(pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)){
+    choice = pokemonOfAsh[i].name;
+}
+});
+
+console.log(pokemonOfAsh.findIndex(function (value: Pokemon,i: number){
+    pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)
+}))
+    
+
+
 console.log('I choose you, ' + choice);
 
 function initializePokemon(): Pokemon[] {
