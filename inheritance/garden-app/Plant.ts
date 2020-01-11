@@ -17,24 +17,4 @@ export class Plant {
       this.absorb = absorb;
       this.type = type;
   }
-  
-
-  status(): string {
-    let waterNeed: string;
-    if(this.need){
-      waterNeed = "needs water"
-    } else {
-        waterNeed = "doesn't need water"
-    }
-    
-    return "The " + this.colour + " " + this.type + " " + waterNeed;
-  }
-
-  getWater(amount: number): void {
-    amount *= this.absorb;
-    if(this.need){
-        this.water += amount;
-    }
-    this.water < this.minimum ? this.need = true : this.need = false;
-}
 }
