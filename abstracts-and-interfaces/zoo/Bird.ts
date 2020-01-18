@@ -1,6 +1,7 @@
 import { Animal } from './Animal'
+import { Flyable } from '../flyable/IFlyable';
 
-export class Bird extends Animal {
+export class Bird extends Animal implements Flyable{
     numberofWings: number;
     beak: boolean;
 
@@ -14,6 +15,9 @@ export class Bird extends Animal {
     breed(): string {
         return 'laying eggs';
     }
+    land(){}
+    fly(){}
+    takeOff(){}
     
 
 }
