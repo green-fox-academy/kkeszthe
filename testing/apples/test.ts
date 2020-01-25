@@ -1,5 +1,5 @@
 import { Apple } from './Apples';
-import {test} from '../node_modules/tape';
+import test from 'tape';
 
 test('Initiate Apple class', t => {
     let v: Apple = new Apple
