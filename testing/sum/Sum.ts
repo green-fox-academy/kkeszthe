@@ -1,5 +1,9 @@
 export class Sum {
-    sum(n1: number, n2: number): number{
-        return n1 + n2;
+    sum(numbers: number[]): number{
+        let sum: number = 0;
+        numbers.map((element) => {
+            sum += element
+        });
+        return sum;
     }
 };
