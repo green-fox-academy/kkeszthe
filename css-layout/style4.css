@@ -1,0 +1,12 @@
+li {
+	list-style-type: none;
+}
+body {
+	height: 800px;
+	display: flex;
+	margin: 0px;
+}
+nav {
+	height: 200 px;
+	background-color: purple;
+}
