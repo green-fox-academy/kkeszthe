@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Welcome!</title>
+		<link rel="stylesheet" href="static/coctails-style.css" />
+	</head>
+	<body>
+		<h1>Coctails</h1>
+		<ul>
+			<li>all</li>
+			<% alcoholList.forEach( item =>{%>
+			<li><%= item%></li>
+			<%}) %>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th class="column1"><h2>NAME</h2></th>
+					<th class="column2"><h2>PRICE</h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% coctails.forEach( item =>{%> <% if(item.contains.includes(filter)){%>
+				<tr>
+					<td class="column1">
+						<h3><%= item.name%></h3>
+						<p><%= item.contains%></p>
+					</td>
+					<td class="column2"><%= item.price%> Ft</td></tr
+				>
+				<%} else if(filter === undefined){%>
+				<tr>
+					<td class="column1">
+						<h3><%= item.name%></h3>
+						<p><%= item.contains%></p>
+					</td>
+					<td class="column2"><%= item.price%> Ft</td>
+				</tr>
+				<%}}) %>
+			</tbody>
+		</table>
+	</body>
+</html>

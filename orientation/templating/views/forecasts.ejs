@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="static/forecasts-style.css" />
+		<title>Forecasts</title>
+	</head>
+	<body>
+		<table>
+			<tbody>
+				<% forecasts.forEach( item =>{%> <% if(item.city.includes(filter)){%>
+				<h1><%= item.city%></h1>
+				<tr class="city">
+					<% item.weather.forEach( forecast =>{ %>
+
+					<td>
+						<%if(forecast.icon === "rainy"){%><img
+							src="static/rainy.png"
+							alt=""
+						/><%}%> <%if(forecast.icon === "cloudy"){%><img
+							src="static/cloudy.png"
+							alt=""
+						/><%}%> <%if(forecast.icon === "snowy"){%><img
+							src="static/snowy.png"
+							alt=""
+						/><%}%> <%if(forecast.icon === "sunny"){%><img
+							src="static/sunny.png"
+							alt=""
+						/><%}%> <%if(forecast.icon === "partly_cloudy"){%><img
+							src="static/partly_cloudy.png"
+							alt=""
+						/><%}%>
+
+						<h2><%= forecast.temp%>°C</h2>
+						<p><%= forecast.message%></p>
+					</td>
+					<%}) %>
+				</tr>
+				<%} else if(filter === undefined){%>
+				<tr class="day">
+					<td>
+						<h1><%= item.city%></h1>
+						<p><%= item.location%></p>
+					</td>
+					<td>
+						<h2><%= item.weather[0].temp%>°C</h2>
+					</td>
+					<td>
+						<%if(item.weather[0].icon === "rainy"){%><img
+							src="static/rainy.png"
+							alt=""
+						/><%}%> <%if(item.weather[0].icon === "cloudy"){%><img
+							src="static/cloudy.png"
+							alt=""
+						/><%}%> <%if(item.weather[0].icon === "snowy"){%><img
+							src="static/snowy.png"
+							alt=""
+						/><%}%> <%if(item.weather[0].icon === "sunny"){%><img
+							src="static/sunny.png"
+							alt=""
+						/><%}%> <%if(item.weather[0].icon === "partly_cloudy"){%><img
+							src="static/partly_cloudy.png"
+							alt=""
+						/><%}%>
+					</td>
+				</tr>
+				<%}}) %>
+			</tbody>
+		</table>
+	</body>
+</html>
