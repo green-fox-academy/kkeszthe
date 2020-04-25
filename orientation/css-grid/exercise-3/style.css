@@ -1,0 +1,43 @@
+html {
+	height: 100%;
+}
+body {
+	display: grid;
+	margin: 0;
+	height: 100%;
+	grid-template-columns: 40px 1fr 2fr 40px;
+	grid-template-rows: 80px 67% 60px 40px;
+	row-gap: 1%;
+	column-gap: 1%;
+}
+nav {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: blueviolet;
+	grid-column: 1 / span 4;
+	grid-row: 1 / span 1;
+	padding-left: 20px;
+}
+button {
+	background-color: cyan;
+	border: 0;
+	margin: 2%;
+	height: 40px;
+	width: 120px;
+}
+.sidebar {
+	background-color: seagreen;
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+}
+.content {
+	background-color: orange;
+	grid-column: 3 / span 1;
+	grid-row: 2 / span 1;
+}
+footer {
+	background-color: darkgrey;
+	grid-column: 2 / span 2;
+	grid-row: 3 / span 1;
+}

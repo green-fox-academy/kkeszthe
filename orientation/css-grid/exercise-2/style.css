@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+}
+.container {
+	width: auto;
+	height: 500px;
+	background-color: black;
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	grid-template-rows: repeat(3, 3fr);
+	grid-auto-rows: 1fr;
+	grid-auto-columns: 1fr;
+	column-gap: 1%;
+	row-gap: 2%;
+}
+.purple {
+	background-color: indigo;
+}
+.green {
+	grid-column: 2 / span 2;
+	grid-row: 1 / span 2;
+	background-color: green;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.yellow {
+	width: 70%;
+	height: 60%;
+	background-color: yellow;
+}
