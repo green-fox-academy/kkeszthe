@@ -93,6 +93,6 @@ app.post('/dountil/:action', (req, res) => {
 			res.send({ error: 'Please provide a number!' });
 		}
 	} else {
-		res.send({ error: 'Please provide a number!' });
+		res.send({ error: 'Please provide an action and a number!' });
 	}
 });
