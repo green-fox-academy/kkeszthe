@@ -20,3 +20,16 @@ CREATE TABLE posts
     (user_name),
     vote INTEGER
 );
+
+    SELECT *
+    FROM posts;
+
+    insert into posts
+        (title, post_url, user, time_stamp)
+    values
+        ("Zűrök mindenütt", "9gag.com", "tekla", now());
+
+    INSERT INTO users
+        (user_name)
+    VALUES
+        ("tekla")

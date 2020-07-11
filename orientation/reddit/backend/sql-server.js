@@ -13,36 +13,43 @@ conn.connect((err) => {
 		return;
 	}
 	console.log('Connection established');
-	conn.end();
 });
 
-export function getPosts(cb) {
+function getPosts(cb) {
 	conn.query('select * from posts;', (err, rows) => {
-		console.log(err);
 		if (err) {
-			cb();
+			console.log(err);
 		} else {
 			cb(rows);
 		}
 	});
 }
 
-export function insertPost(title, postURL, user, timestamp, cb) {
-	db.query(
+function insertPost(title, url, user, cb) {
+	conn.query(
 		`insert into posts (title, post_url, user, time_stamp)
-    values (?, ?, ?, now());`,
-		[title, postURL, user],
+    values ("${title}", "${url}", "${user}", now());`,
+
 		(err, result) => {
 			if (err) {
-				cb();
+				console.log(err);
 			} else {
-				cb({
-					title,
-					postURL,
-					user,
-					id: result.insertId,
-				});
+				console.log('Added SQL lines' + result.affectedRows);
 			}
 		}
 	);
 }
+
+function deletePost(id) {
+	conn.query(`DELETE FROM posts WHERE id = ${id}`, (err, result) => {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log('Deleted SQL lines' + result.affectedRows);
+		}
+	});
+}
+
+module.exports.getPosts = getPosts;
+module.exports.insertPost = insertPost;
+module.exports.deletePost = deletePost;

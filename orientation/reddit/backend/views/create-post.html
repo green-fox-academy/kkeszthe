@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reddit</title>
+		<link rel="stylesheet" href="../assets/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header><h1>LUNA</h1></header>
+
+		<div class="left">
+			<form action="view-posts.html" method="POST">
+				<legend></legend>
+				<div class="input">
+					<label for="title">Title</label>
+					<textarea
+						type="text"
+						id="title"
+						name="title"
+						class="field"
+						autofocus
+						required
+					></textarea>
+				</div>
+
+				<div class="input">
+					<label for="url">URL</label>
+					<input
+						type="text"
+						id="url"
+						name="url"
+						class="field"
+						required
+						pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&=]*)"
+					/>
+				</div>
+				<button type="submit" id="submit">Submit</button>
+			</form>
+		</div>
+		<div class="right"></div>
+	</body>
+	<script src="./create-post-scripts.js"></script>
+</html>
